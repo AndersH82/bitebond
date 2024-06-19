@@ -1,31 +1,27 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import UserRegistration from './pages/UserRegistration';
-import Profile from './pages/Profile';
-import Recipe from './pages/Recipe';
-import Login from './pages/Login';
-import RecipeList from './pages/RecipeList';
-import ProfileList from './pages/ProfileList';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import { UserProvider } from './context/UserContext';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+import ProfileList from './pages/ProfileList';
+import RecipeList from './pages/RecipeList';
+import UserRegistration from './pages/UserRegistration';
+import Login from './pages/Login';
 
-function App() {
-  return (
-    <UserProvider>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/register" element={<UserRegistration />} />
-          <Route path="/profile/:userId" element={<Profile />} />
-          <Route path="/recipe/:id" element={<Recipe />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/recipes" element={<RecipeList />} />
-          <Route path="/profiles" element={<ProfileList />} />
-        </Routes>
-      </Router>
-    </UserProvider>
-  );
-}
-
+const App = () => {
+    return (
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/profiles" element={<ProfileList />} />
+                <Route path="/recipes" element={<RecipeList />} />
+                <Route path="/register" element={<UserRegistration />} />
+                <Route path="/login" element={<Login />} />
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;

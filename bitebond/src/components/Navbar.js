@@ -2,6 +2,8 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Box, Flex, HStack, IconButton, useDisclosure, Stack, Image, Link } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faUsers, faBookOpen, faRightToBracket, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import bitebondLogo from '../images/bitebond.png';
 
 const Navbar = () => {
@@ -26,11 +28,11 @@ const Navbar = () => {
                         spacing={4}
                         display={{ base: 'none', md: 'flex' }}
                     >
+                        <Link as={RouterLink} to="/profile" color="black">Profile</Link>
                         <Link as={RouterLink} to="/profiles" color="black">Other Chefs</Link>
-                        <Link as={RouterLink} to="/recipes" color="black">Recipes</Link>
+                        <Link as={RouterLink} to="/recipes" color="black">Recipes List</Link>
                         <Link as={RouterLink} to="/register" color="black">Register</Link>
                         <Link as={RouterLink} to="/login" color="black">Login</Link>
-                        
                     </HStack>
                 </HStack>
             </Flex>
@@ -38,10 +40,11 @@ const Navbar = () => {
             {isOpen ? (
                 <Box pb={4} display={{ md: 'none' }}>
                     <Stack as="nav" spacing={4}>
-                        <Link as={RouterLink} to="/register" color="white">Register</Link>
-                        <Link as={RouterLink} to="/login" color="white">Login</Link>
-                        <Link as={RouterLink} to="/recipes" color="white">Recipes</Link>
-                        <Link as={RouterLink} to="/profiles" color="white">Profiles</Link>
+                        <Link as={RouterLink} to="/profile" color="black"><FontAwesomeIcon icon={faUser} /> Profile</Link>
+                        <Link as={RouterLink} to="/profiles" color="black"><FontAwesomeIcon icon={faUsers} /> Other Chefs</Link>
+                        <Link as={RouterLink} to="/recipes" color="black"><FontAwesomeIcon icon={faBookOpen} /> Recipes List</Link>
+                        <Link as={RouterLink} to="/register" color="black"><FontAwesomeIcon icon={faAddressCard} /> Register</Link>
+                        <Link as={RouterLink} to="/login" color="black"><FontAwesomeIcon icon={faRightToBracket} /> Login</Link>
                     </Stack>
                 </Box>
             ) : null}
