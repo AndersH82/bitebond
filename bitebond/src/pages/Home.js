@@ -10,7 +10,7 @@ const Home = () => {
                 <Image 
                     src={homeImage} 
                     alt="Home Image" 
-                    boxSize={{ base: '200px', md: '300px', lg: '400px' }} 
+                    boxSize={{ base: '300px', md: '400px', lg: '500px' }} 
                     objectFit="cover"
                 />
             </Box>
