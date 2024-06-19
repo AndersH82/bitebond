@@ -7,6 +7,7 @@ import ProfileList from './pages/ProfileList';
 import RecipeList from './pages/RecipeList';
 import UserRegistration from './pages/UserRegistration';
 import Login from './pages/Login';
+import AddRecipe from './pages/AddRecipe';
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                 <Route path="/recipes" element={<RecipeList />} />
                 <Route path="/register" element={<UserRegistration />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/add-recipe" element={<AddRecipe />} />
             </Routes>
         </Router>
     );

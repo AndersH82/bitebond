@@ -2,13 +2,13 @@
 import React from 'react';
 import { Box, Flex, Image, Text, Button, Stack } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import homeImage from '../images/bitebond.png';
+import homeImage from '../images/meatdish.png';
 
 const Home = () => {
     return (
         <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="center" minH="100vh" p={4}>
             <Box flex="1" display="flex" justifyContent="center">
-                <Image src={homeImage} alt="Home Image" boxSize="300px" />
+                <Image src={homeImage} alt="Home Image" boxSize="500px" />
             </Box>
             <Box flex="1" textAlign={{ base: 'center', md: 'left' }} p={4}>
                 <Text fontSize="2xl" mb={4}>Welcome to BiteBond</Text>

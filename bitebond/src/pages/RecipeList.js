@@ -17,6 +17,9 @@ const RecipeList = () => {
                     </li>
                 ))}
             </ul>
+            <Link to="/add-recipe">
+                <button>Add Recipe</button>
+            </Link>
         </div>
     );
 };

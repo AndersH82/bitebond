@@ -7,9 +7,9 @@ const Profile = () => {
 
   return (
     <Box p={5}>
-      <Heading as="h1" mb={5}>Profile Page</Heading>
       <Card maxW='md' mx="auto">
         <CardHeader>
+          <Heading as="h1" mb={5}>Profile Page</Heading>
           <Flex spacing='4'>
             <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
               <Avatar name={user ? user.username : 'Guest'} src={user ? user.avatarUrl : 'https://bit.ly/sage-adebayo'} />
