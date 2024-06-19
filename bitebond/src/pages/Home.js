@@ -1,4 +1,3 @@
-// src/pages/Home.js
 import React from 'react';
 import { Box, Flex, Image, Text, Button, Stack } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
@@ -8,7 +7,12 @@ const Home = () => {
     return (
         <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="center" minH="100vh" p={4}>
             <Box flex="1" display="flex" justifyContent="center">
-                <Image src={homeImage} alt="Home Image" boxSize="500px" />
+                <Image 
+                    src={homeImage} 
+                    alt="Home Image" 
+                    boxSize={{ base: '200px', md: '300px', lg: '400px' }} 
+                    objectFit="cover"
+                />
             </Box>
             <Box flex="1" textAlign={{ base: 'center', md: 'left' }} p={4}>
                 <Text fontSize="2xl" mb={4}>Welcome to BiteBond</Text>
